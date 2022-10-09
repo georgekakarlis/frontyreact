@@ -1,22 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useEffect } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import NavBarNoSignBtn from "../ui/Navbar/NavbarNoSignBtn";
 
 function SignUpForm(props) {
-  /* const { isLoading, data, error } = state;
+  const { isLoading, data, error } = state;
   const [showPassword, SetPasswordVisibility] = useState(false);
-  const { addToast } = useToasts(); */
+  const notify = () => toast('Account created successfully');
 
   //useEffect Toast Acc created succesfully
- /*  useEffect(() => {
+  useEffect(() => {
     if (data?.user) {
-      addToast("Account created successfully", {
-        appearance: "success",
-        autoDismiss: true,
-      }); */
+      notify()}
+    } 
    
 
       //State if user is logged in .Need to reform it in a central file
